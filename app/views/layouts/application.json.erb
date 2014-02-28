@@ -1,0 +1,10 @@
+{
+  "status": <%= response.status %>
+
+  <% if @message %>,"message": <%= @message.to_json.html_safe %><% end %>
+
+  <% if @error %>,"error": <%= @error.to_json.html_safe %><% end %>
+
+  <% if yield.length > 2 %>,"length": <%= yield.length %><% end %>
+  <% if yield.length > 2 %>,"data": <%= yield %><% end %>
+}
