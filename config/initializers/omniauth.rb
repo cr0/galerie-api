@@ -10,6 +10,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :google_oauth2, ENV['OAUTH_GOOGLE_APPID'], ENV['OAUTH_GOOGLE_SECRET'],
     :scope => 'https://www.googleapis.com/auth/userinfo.profile,https://www.googleapis.com/auth/userinfo.email'
 
-  provider :amazon,  ENV['OAUTH_AMAZON_APPID'], ENV['OAUTH_AMAZON_SECRET'],
+  provider :amazon, ENV['OAUTH_AMAZON_APPID'], ENV['OAUTH_AMAZON_SECRET'],
     :scope => 'profile'
 end

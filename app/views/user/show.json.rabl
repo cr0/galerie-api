@@ -1,8 +1,7 @@
 object :@user
+extends 'user/base'
 
-node(:id) { |user| user._id.to_s }
-
-attributes :name, :nick, :email, :birthday, :reputation
+attributes :nick, :email, :birthday, :reputation
 
 child :avatar do
   attributes :url, :provider
@@ -17,3 +16,4 @@ end
 node(:finalize, :if => lambda { |user| current_user && user._id == current_user._id && user.provider.finalized }) do |user|
   true
 end
+

@@ -9,10 +9,14 @@ class User
   field :email, type: String
   field :birthday, type: Date
   field :reputation, type: Integer, default: 0
+  field :pending, type: Boolean, default: false
 
   embeds_one :avatar
   embeds_one :provider
   embeds_many :tokens
+  embeds_many :locations
+  has_many :pictures, inverse_of: :author
+  has_and_belongs_to_many :buckets, inverse_of: :authors
 
   def self.create_with_omniauth!(auth)
     create! do |user|

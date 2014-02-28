@@ -6,6 +6,8 @@ GalerieApi::Application.routes.draw do
 
   scope '/api' do
     resources :user, only: [:index, :show, :create, :update, :destroy], :defaults => { :format => 'json' }
+    resources :bucket, only: [:index, :show, :create, :update, :destroy], :defaults => { :format => 'json' }
+    resources :picture, only: [:index, :show, :create, :update, :destroy], :defaults => { :format => 'json' }
   end
 
   %w( 404 422 500 ).each do |code|
