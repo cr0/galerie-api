@@ -1,1 +1,1 @@
-attributes :name, :coordinates
+attributes :address, :coordinates
