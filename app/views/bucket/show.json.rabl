@@ -2,7 +2,7 @@ object :@bucket
 extends 'bucket/base'
 
 child :location, partial: 'common/location'
-child :tags, partial: 'common/tag'
-child :users, partial: 'user/base'
+child :tags, partial: 'tag/base'
+child :authors, partial: 'user/base'
+child :persons, partial: 'user/base'
 child :pictures, partial: 'picture/base'
-

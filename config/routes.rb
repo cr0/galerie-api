@@ -5,6 +5,8 @@ GalerieApi::Application.routes.draw do
   get '/auth/logout'             => "session#destroy", :as => :signout, :defaults => { :format => 'json' }
 
   scope '/api' do
+    get '/tag/reduce' => "tag#reduce", :defaults => { :format => 'json' }
+    get '/tag/:id'    => "tag#show", :defaults => { :format => 'json' }
     resources :user, only: [:index, :show, :create, :update, :destroy], :defaults => { :format => 'json' }
     resources :bucket, only: [:index, :show, :create, :update, :destroy], :defaults => { :format => 'json' }
     resources :picture, only: [:index, :show, :create, :update, :destroy], :defaults => { :format => 'json' }

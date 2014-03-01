@@ -1,10 +1,9 @@
-class User
+class User < Person
   include Mongoid::Document
 
   validates_presence_of :name, :nick, :email, :provider, :avatar
   validates_uniqueness_of :nick, :email
 
-  field :name, type: String
   field :nick, type: String
   field :email, type: String
   field :birthday, type: Date

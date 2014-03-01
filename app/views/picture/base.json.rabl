@@ -7,5 +7,11 @@ child :sources do
 end
 
 node :meta do |picture|
-  { tags: picture.tags.length, location: picture.location.nil? ? 0 : 1 }
+  {
+    sources: picture.sources.length,
+    persons: picture.persons.length,
+    tags: picture.tags.length,
+    location: picture.location.nil? ? 0 : 1
+  }
 end
+
