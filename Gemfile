@@ -19,6 +19,8 @@ gem 'omniauth-amazon'
 
 gem 'gravatar-ultimate'
 
+gem 'geocoder'
+
 gem 'faker'
 
 group :doc do

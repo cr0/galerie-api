@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-location = Location.new(name: 'Bayerstraße 7, 80335 München', partial: ['Bayerstraße', '7', '80335', 'München'], loc: [48.13901, 11.56687])
+location = Location.new(address: 'Bayerstraße 7, 80335 München', partial: ['Bayerstraße', '7', '80335', 'München'])
 
 user = User.new
 user.name = Faker::Name.name
